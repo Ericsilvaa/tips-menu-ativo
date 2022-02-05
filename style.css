@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  background-color: #23232e;
+}
+
+.corpo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* unidade responsiva que se adapta a janela de visualização dos users */
+  height: 10vh;
+  margin: 0px 80px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 2px;
+  padding: 5px 15px;
+  margin-left: 10px;
+}
+
+main {
+  background-color: #f5f5f5;
+  height: 90vh;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 6px;
+}
+
+@media (max-width: 999px) {
+  body {
+    /* para esconder a nav-list colocada no transform */
+    overflow-x: hidden;
+  }
+  .corpo {
+    margin: 0px 30px;
+  }
+  .nav-list {
+    position: absolute;
+    top: 10vh;
+    right: 0vh;
+    width: 15vw;
+    height: 22vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* para jogar a tela para fora do view */
+    transform: translateX(100%);
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    /* para realizar a animação */
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}

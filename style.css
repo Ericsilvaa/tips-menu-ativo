@@ -89,7 +89,7 @@ main {
 
   .nav-list li {
     margin-left: 0;
-    /* para realizar a animação */
+    /* para realizar a animação da nav-bar */
     opacity: 0;
   }
 

@@ -12,7 +12,7 @@ a {
 h1 {
   text-align: center;
   font-size: 3rem;
-  margin-top: 100px;
+  padding-top: 100px;
   color: #23232e;
 }
 
@@ -88,10 +88,22 @@ main {
     justify-content: space-around;
     /* para jogar a tela para fora do view */
     transform: translateX(100%);
+    transition: transform 0.3s ease-in;
   }
 
   .nav-list.active {
     transform: translateX(0);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translate(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0);
+    }
   }
 
   .nav-list li {
